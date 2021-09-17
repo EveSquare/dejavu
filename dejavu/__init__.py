@@ -100,6 +100,7 @@ class Dejavu:
         while True:
             try:
                 song_name, hashes, file_hash = next(iterator)
+                print(f"song_name: {song_name} hashes: {len(hashes)} --- {file_hash}")
             except multiprocessing.TimeoutError:
                 continue
             except StopIteration:
